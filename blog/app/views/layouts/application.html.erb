@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<style type="text/css">
+   body { margin: 0; }
+   #content { position: absolute; } 
+   #content { overflow: auto;}
+   hr {solid auto; margin-left: -10px; margin-right: -10px; margin-top: -10px;}
+	.lineleft { 
+    border-left: 2px solid #ccc; /* Параметры линии */ 
+    margin-left: 20px; /* Отступ слева */
+    padding-left: 10px;
+	padding-right: 10px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	border-right: 2px solid #ccc; /* Параметры линии */ 
+    margin-right: 0; /* Отступ слева */ 
+   }
+   td {
+    vertical-align: 0;
+    padding: 5px;
+    padding-right: 10px;
+    border: 1px solid lightgray;
+}
+   #content {
+    top: 0; /* Расстояние от верхнего края */
+    left: 170px; /* Расстояние от левого края */ 
+    bottom: 0; right: 250px;
+   }
+</style>
+	<head>
+		<title>Blog</title>
+		<%= csrf_meta_tags %>
+
+		<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+		<%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+	</head>
+	
+		<body>
+		<div id ="content"class="lineleft">
+	
+			<%= yield %>
+		
+		</div>
+		</body>
+	
+</html>
